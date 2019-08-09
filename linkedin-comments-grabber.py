@@ -100,9 +100,9 @@ def add_comment(parent, comment):
             i + 1, 
             parent, 
             comment.a.attrs.get('href'), 
-            comment.find('span', 
-                class_="feed-base-comment-item__name Sans-13px-black-70%-semibold").
-                string.replace('\n','').strip(), 
+            str(comment.find('span', 
+                class_="feed-base-comment-item__name Sans-13px-black-70%-semibold")).
+                replace('\n','').strip(), 
             comment.img.attrs.get('src'),
             paragraph_cleaning(comment.find('p')), 
             get_likes(comment), 
